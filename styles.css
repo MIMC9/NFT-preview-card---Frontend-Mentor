@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit';
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 85%;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 16px;
+    
+}
+
+.container {
+    width: 85%;
+    height: 260px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nft {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsla(178, 100%, 50%, 0.200);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.name {
+    margin: 25px 30px;
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.42rem;
+    font-weight: 600;
+}
+
+.description {
+    margin: 0 30px;
+    color: hsl(215, 51%, 70%);
+    font-size: 1rem;
+    line-height: 28px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 18px 30px;
+}
+
+.value {
+    display: flex;
+    color: hsl(178, 100%, 50%);
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.time-left {
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+    font-size: .9rem;
+}
+
+.line {
+    width: 85%;
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    margin: 0 30px 30px 30px;
+    gap: 20px;
+}
+
+.creator-img {
+    width: 40px;
+    border-radius: 50%;
+    outline: 1px solid hsl(0, 0%, 100%);
+}
+
+.text {
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.text span {
+    color: hsl(0, 0%, 100%);
+}
+
+.text span:hover, .name:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+@media only screen and (min-width: 375px) {
+    .card {
+        width: 325px;
+        margin-top: 80px;
+    }
+}
